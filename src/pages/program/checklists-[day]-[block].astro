@@ -162,16 +162,7 @@ const sessionsByHall = (["goldfields", "eureka2", "eureka3"] as const).map((hall
                     (count, session) => count + session.data.speakers.length,
                     0,
                   )}
-                speaker gifts and
-                {
-                  hallInfo.sessions.filter(
-                    (session) =>
-                      session.data.type != "open-close" && !session.data.online,
-                  ).length
-                }
-                thank-you cards labelled "{hallInfo.hall.toUpperCase()}
-                {timeRange.start?.toLocaleString({ weekday: "short", timeZone: timeZone })}
-                {block}"
+                speaker gifts (mug, pin, 2 shiny stickers)
               </li>
               <li>
                 Inform the duty officer whether everyone is present:
@@ -290,8 +281,7 @@ const sessionsByHall = (["goldfields", "eureka2", "eureka3"] as const).map((hall
                     !session.data.online ? (
                       <li>
                         Prepare {session.data.speakers.length} speaker gift
-                        {session.data.speakers.length > 1 ? "s" : null} and
-                        **the correct** thank you card for the session chair
+                        {session.data.speakers.length > 1 ? "s" : null}
                       </li>
                     ) : null}
                   </ul>
@@ -370,7 +360,7 @@ const sessionsByHall = (["goldfields", "eureka2", "eureka3"] as const).map((hall
                         for their talk
                         {session.data.online
                           ? null
-                          : "and present them with their speaker gift and thank-you card"}
+                          : "and present them with their speaker gift"}
                       </li>
                       <li>
                         Tell the audience about the next talk or upcoming break
